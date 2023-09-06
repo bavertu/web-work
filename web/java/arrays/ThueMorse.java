@@ -1,19 +1,18 @@
 public class ThueMorse {
-    
-    // Helper function to determine if two integers have the same parity of 1-bits
-    private static boolean sameParityOfOnes(int a, int b) {
-        // Calculate the number of 1-bits for each number and take their modulo by 2
-        // If they have the same parity, return true
-        return Integer.bitCount(a) % 2 == Integer.bitCount(b) % 2;
-    }
-    
+
     public static void main(String[] args) {
         int n = Integer.parseInt(args[0]);
 
-        // Generate the n-by-n pattern based on Thue–Morse sequence
+        // Generate the Thue–Morse sequence
+        int[] sequence = new int[n];
+        for (int i = 0; i < n; i++) {
+            sequence[i] = Integer.bitCount(i) % 2;
+        }
+
+        // Create and print the n-by-n pattern
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                if (sameParityOfOnes(i, j)) {
+                if (sequence[i] == sequence[j]) {
                     System.out.print("+  ");
                 } else {
                     System.out.print("-  ");
@@ -23,4 +22,3 @@ public class ThueMorse {
         }
     }
 }
-
