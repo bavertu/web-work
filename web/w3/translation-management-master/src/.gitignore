@@ -1,6 +1,0 @@
-www/_data/*.json
-config.json
-Gemfile.lock
-node_modules
-package-lock.json
-.sass-cache/

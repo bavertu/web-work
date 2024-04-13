@@ -171,7 +171,7 @@ function displayBackgroundImage(type, backgroundPath) {
 async function fetchAPIData(endpoint) {
   // Register your key at https://www.themoviedb.org/settings/api and enter here
   // Only use this for development or very small projects. You should store your key and make requests from a server
-  const API_KEY = '';
+  const API_KEY = '3faea6bbded4da353c30ad63e3eee5d3';
   const API_URL = 'https://api.themoviedb.org/3/';
 
   showSpinner();
